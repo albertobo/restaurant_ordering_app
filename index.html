@@ -1,0 +1,40 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="restaurant_ordering_app.css" >
+       <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="sign">
+            <h1>Jimmy's Diner</h1>
+            <h2>The best burgers and pizzas in town</h2>
+            </div>
+        </header>
+        <section id="menu">
+        </section>
+        <div id="delete">
+        <h3 class="hidden">Your order</h3>
+        <section id="order-list">
+         </section>
+           <h3 class="hidden">Total price:</h3>
+           <button class="green-btn hidden" data-complete="complete">Complete order</button>
+           </div>
+           <div class="textarea">          
+           <form id="hidden-form">
+               <h3>Enter card details</h3>
+               <div class="textarea-container">
+               <textarea id="name"></textarea>
+               </div>
+               <div class="textarea-container">
+               <textarea></textarea>
+               </div>
+               <div class="textarea-container">
+               <textarea></textarea>
+               </div>
+               <button class="green-btn" type="button" data-pay="pay">Pay</button>
+               </form>
+               </div>               
+	<script src="restaurant_ordering_app.js" type="module"></script>
+    </body>
+</html>
+
