@@ -1,31 +1,35 @@
+*{
+    box-sizing: border-box
+}
+
 body {
-    margin: 0;
     font-family: Smythe;
-    height: 1161px;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
 } 
 
 header {
-    width: 600px;
+    width: 100%;
     height: 167px;
-    background-image: url();
+    margin-left: 0
 }
 
 #sign {
-    margin: auto;
-    margin-left: 64px;
+    margin: 1em;
 }
 
 .item {
     display: flex;
-    height: 140px;
-    width: 504px;
+    height: 30%;
+    width: 100%;
     margin: auto;
     border-bottom: 1px solid #D2D2D2;  
 }
 
 .emoji {
     font-size: 79px;
-    width: 70px;
+    width: 85px;
     margin: auto;
     margin-left: 0;   
 }
@@ -34,6 +38,7 @@ header {
     margin: auto;
     margin-left: 0px;
     width: 150px;
+
 }
 
 .add-btn {
@@ -42,7 +47,7 @@ header {
     width: 50px;
     height: 50px;
     margin: auto;
-    margin-right: 0;
+    
 }
 
 .order-element-container {
@@ -61,56 +66,43 @@ header {
     height: 22px;
     margin: auto;
     background-color: white;
-    margin-left: 0px
+    margin-left: 0
+}
+
+#hidden-form{
+    display: none;
 }
 
 .hidden {
     display: none;
 }
 
-#hidden-form {
-    display: none;
-    margin: auto
+.form-container {
+    display: flex;
+    justify-content: center;
 }
 
-.form {
-    margin: auto;
-    border: 1px solid;
-    display: block;
-    flex-direction: column;
-    position: absolute;
-    width: 524px;
-    height: 524px;
-    left: 38px;
-    top: 292px;
+form {
+    position: fixed;    
+    top: 5em;
+    bottom: 5em;
     background: #FFFFFF;
-    border-radius: 4px;
-    
+    border-radius: 4px;   
+}
+
+.user-detail-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 71px;
+    border-radius: 3.88991px;
 }
 
 textarea {
     resize: none;
-width: 216.13px;
-height: 40.92px;
-left: 87.75px;
-font-family: 'Verdana';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 31px;
-margin-left: 12px;
-margin-top: 12px;
-color: #757575;
-}
-
-.textarea-container {
-    box-sizing: border-box;
-    width: 475px;
-    height: 71px;
-    left: 61px;
-    top: 426px;
-    border: 1px solid #757575;
-    border-radius: 3.88991px;
+    margin: auto
 }
 
 .center {
@@ -118,19 +110,20 @@ color: #757575;
     display: flex;
     justify-content: center;
     text-align: center;
-    width: 504px;
+    width: 100%;
     height: 120px;
     background: #ECFDF5;
+}
+
+.center-title {
+    text-align: center
 }
 
 .green-btn {
     border: none;
     color: white;
-    width: 475.91px;
+    width: 100%;
     height: 51.3px;
-    left: 61.22px;
-    top: 733.09px;
     background: #16DB99;
     border-radius: 3.88991px;
 }
-
