@@ -15,6 +15,7 @@ document.addEventListener("click", function(e) {
     if(e.target.dataset.id){
         document.getElementById("your-order").innerHTML = "Your order"
         document.getElementById("total-price").innerHTML = `Total price`
+        document.getElementById("complete-button").classList.remove("hidden")
         menuArray.forEach(function(element) {
             if(element.id == e.target.dataset.id){
                 const orderElement = {
@@ -24,6 +25,7 @@ document.addEventListener("click", function(e) {
                     id: id
                 }
                 totalPrice += element.price
+                document.getElementById("total-price-num").innerHTML =`${totalPrice}$`
                 id++
                  
                 orderListArray.push(orderElement)               
