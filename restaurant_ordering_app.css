@@ -69,6 +69,22 @@ header {
     margin-left: 0
 }
 
+.total-price-container {
+    display: flex;
+    flex-direction: row;    
+}
+
+#total-price {
+    width: 100px;
+    height: 10px;
+    margin-left: 0
+}
+
+.total-price-num {
+    width: 50px;
+    height: 10px;
+}
+
 #hidden-form{
     display: none;
 }

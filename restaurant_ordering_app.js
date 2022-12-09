@@ -7,15 +7,14 @@ const form = document.getElementById("hidden-form")
 let orderListArray = []
 let htmlOrderList = ""
 let id = 0
+let totalPrice = 0
 
 menu.innerHTML = getHtml()
 
 document.addEventListener("click", function(e) {
     if(e.target.dataset.id){
-        for(let element of document.getElementsByClassName("hidden")){
-            console.log(element)
-            element.classList.remove("hidden")
-        }
+        document.getElementById("your-order").innerHTML = "Your order"
+        document.getElementById("total-price").innerHTML = `Total price`
         menuArray.forEach(function(element) {
             if(element.id == e.target.dataset.id){
                 const orderElement = {
@@ -24,7 +23,9 @@ document.addEventListener("click", function(e) {
                     button: "remove",
                     id: id
                 }
+                totalPrice += element.price
                 id++
+                 
                 orderListArray.push(orderElement)               
             }
             })
@@ -65,7 +66,7 @@ document.addEventListener("click", function(e) {
                   htmlOrderList += `<div class="order-element-container">
                                    <h3>${element.name}</h3>
                                    <button class="remove-btn" data-order="${element.id}">${element.button}</button>
-                                   <h3>${element.price}</h3>
+                                   <h3>${element.price}$</h3>
                                    </div>
                                    `
                   })
@@ -76,7 +77,6 @@ document.addEventListener("click", function(e) {
     
     if(e.target.dataset.complete) {
         form.style.display = "block"
-        form.classList.toggle("form")
     }
     
     if(e.target.dataset.pay) {
