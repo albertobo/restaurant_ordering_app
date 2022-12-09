@@ -35,7 +35,7 @@ document.addEventListener("click", function(e) {
                 htmlOrderList = ` <div class="order-element-container">
                                   <h3>${element.name}</h3>
                                   <button class="remove-btn" data-order="${element.id}">${element.button}</button>
-                                  <h3>${element.price}</h3>
+                                  <h3>${element.price}$</h3>
                                   </div>
                                   `
             })
@@ -45,15 +45,14 @@ document.addEventListener("click", function(e) {
      if(e.target.dataset.order){
         orderListArray.forEach(function(element) {
             if(e.target.dataset.order == element.id){
+                totalPrice -= element.price
+                document.getElementById("total-price-num").innerHTML =`${totalPrice}$`
                 if(orderListArray.indexOf(element) != 0){
                 let a = orderListArray.splice(orderListArray.indexOf(element), orderListArray.indexOf(element))
                 orderListArray.push(a)
-                orderListArray.pop()
-                }
-                else if(orderListArray.indexOf(element) == 0) {
+                orderListArray.pop()                
+                } else if(orderListArray.indexOf(element) == 0) {
                     orderListArray.shift()
-                    console.log(orderListArray.indexOf(element))
-                    console.log(orderListArray)
                 }
             }
             
